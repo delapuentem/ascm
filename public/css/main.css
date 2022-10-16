@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    color: #24292F;
+}
+
+.container{
+    /* Default margin */
+    margin: 3rem 15rem;
+}
+
+.button {
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0.9rem 1.3rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.button:hover{
+    transition: 0.3s;
+}
+
+.button-primary {
+    color: #ffffff;
+    background-color: #0969DA;
+    -webkit-box-shadow:0 4px 9px -4px #0969DA;
+    -moz-box-shadow: 0 4px 9px -4px #0969DA;
+    box-shadow: 0 4px 9px -4px #0969DA;
+}
+
+.button-primary:hover {
+    background-color: #0557b4;
+    color: white;
+}
+
+.button-secondary {
+    color: #2851AC;
+    background-color: #E3EBF7;
+}
+
+.button-secondary:hover {
+    color: #2851AC;
+    background-color: #d4dbe5;
+}

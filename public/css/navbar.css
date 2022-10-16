@@ -1,0 +1,40 @@
+.navbar{
+/*     box-shadow: 0 0 3px 0 rgba(0,0,0,.07),0 2px 2px 0 rgba(0,0,0,.04)!important; */
+    /* Default margin */
+    padding: 1.5rem 15rem;    
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: #24292F;
+    padding: 0 2rem 0 0;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+
+    color: #737373;
+}
+
+.navbar img{
+    float: right;
+}
+
+.navbar .menu{
+padding-top: 0.6rem;
+}
