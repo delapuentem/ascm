@@ -1,9 +1,10 @@
 .navbar{
-/*     box-shadow: 0 0 3px 0 rgba(0,0,0,.07),0 2px 2px 0 rgba(0,0,0,.04)!important; */
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.07),0 2px 2px 0 rgba(0,0,0,.04)!important; 
     /* Default margin */
-    padding: 1.5rem 15rem;    
+    padding: 1.5rem 13rem;    
     display: grid;
     grid-template-columns: 90% 10%;
+    background-color: #ffffff;
 }
 
 .navbar ul{
@@ -22,7 +23,7 @@
     color: #24292F;
     padding: 0 2rem 0 0;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
 }
 

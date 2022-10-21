@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('../partials/head'); %>
+<link rel="stylesheet" href="../css/upload/index.css">
+<link rel="stylesheet" href="../css/forms.css">
+</head>
+<body>
+    <%- include('../partials/navbar'); %>
+
+    <div class="container">
+        
+        <div class="title"><h2>Agregar nuevo Árbol Singular</h2></div>
+        <form id="formulario" method="POST" action="/api/upload" enctype="multipart/form-data">
+            
+            <div class="left-side">
+
+                <div class="form-title"><h3>Información general</h3></div>
+             
+                <div class="form-control" id="nombre">
+                    <label>Nombre</label>
+                    <input name="nombre" type="text" placeholder="Escribe algo" required>
+                </div>
+                <div class="form-control" id="nombre_cientifico">
+                    <label>Nombre científico</label>
+                    <input name="nombre_cientifico" type="text" placeholder="Escribe algo" required>
+                </div>
+                <div class="form-control form-control-select" id="municipio">
+                    <label>Municipio</label>
+                    <div class="select" id="dropdown1">
+                        <div class="selected">
+                            <div class="value">Selecciona una opción...</div>
+                            <div class="arrow">▼</div>
+                        </div>
+                        <div class="select-options"></div>
+                    </div>
+                </div>
+                <div class="form-control" id="numero">
+                    <label>Número</label>
+                    <input name="numero" type="number" placeholder="Escribe algo">
+                </div>
+                <div class="form-title"><h3>Información detallada</h3></div>
+                <div class="form-control form-control-select" id="estado">
+                    <label>Estado</label>
+                    <div class="select" id="dropdown2">
+                        <div class="selected">
+                            <div class="value">Selecciona una opción...</div>
+                            <div class="arrow">▼</div>
+                        </div>
+                        <div class="select-options"></div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label>Altura</label>
+                    <input name="altura" type="number" placeholder="Escribe algo">
+                </div>
+                <div class="form-control">
+                    <label>Diametro copa</label>
+                    <input name="diametro_copa" type="number" placeholder="Escribe algo">
+                </div>
+            
+                <div class="form-control">
+                    <label>Perímetro tronco</label>
+                    <input name="perimetro_tronco" type="number" placeholder="Escribe algo">
+                </div>
+                <div class="form-control">
+                    <label>Edad</label>
+                    <input name="edad" type="number" placeholder="Escribe algo">
+                </div>
+                <div class="form-control">
+                    <label>Altitud</label>
+                    <input name="altitud" type="number" placeholder="Escribe algo">
+                </div>  
+                <div class="form-control">
+                    <label>Latitud</label>
+                    <input name="latitud" type="text" placeholder="Escribe algo" required>
+                </div>                
+                <div class="form-control">
+                    <label>Longitud</label>
+                    <input name="longitud" type="text" placeholder="Escribe algo" required>
+                </div>    
+                <div class="form-title"><h3>Imagen</h3></div> 
+                <div class="form-control" id="imagen">
+                    <label>Imagen</label>
+                    <label class="form-control-file" for="upload-file-1">
+                    <div class="parent">
+                        <div id="upload-file-area-1" class="form-control-file-area">
+                            <div class="image"><img class="image-svg" src="../img/download-svgrepo-com.svg"></div>
+                            <div class="text"><span>Arrastra un archivo o haz click</span></div>
+                        </div>
+                    </div>
+                    </label>
+                    <input name="imagen" type="file" id="upload-file-1" class="form-upload-file" required>
+                </div>    
+                <div class="form-control"> 
+                    <label>Fecha de la imagen</label>
+                    <input name="fecha_imagen" type="date" placeholder="Escribe algo">
+                </div>  
+                <div class="form-title"><h3>Descripción y acceso</h3></div>
+                <div class="form-control"  id="descripcion_acceso">
+                    <label>Acceso</label>
+                    <textarea name="descripcion_acceso" placeholder="Escribe algo" id="descripcion_acceso_textarea" maxlength="200" required></textarea>
+                    <span id="char_count_descripcion_acceso">0/200</span>
+                </div>                    
+                <div class="form-control" id="descripcion">
+                    <label>Descripción</label>
+                    <textarea name="descripcion" placeholder="Escribe algo" id="descripcion_textarea" maxlength="400" required></textarea>
+                    <span id="char_count_descripcion">0/400</span>
+                </div>                
+                <button type="submit" class="button button-primary">enviar</button>
+            </div>
+
+            <div class="right-side">
+            </div>
+
+        </form>
+    </div>
+
+    <%- include('../partials/footer'); %>
+
+    <script defer src="../js/upload/index.js"></script>
+</body>
+</html>

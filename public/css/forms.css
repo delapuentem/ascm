@@ -1,0 +1,155 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.form-control input, .form-control select, textarea{
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    margin:0;
+    font-size: 15px;
+    font-weight: 300;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    height: 10rem;
+}
+
+.form-control input{
+    padding: 0.4rem 0.7rem;
+}
+
+.form-control input:focus, .form-control select:focus, textarea:focus{
+    outline: none;
+    border: 1px solid #727272;
+    transition: all .25s linear;
+
+}
+
+.form-control label{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control input[type=file] {
+    opacity: 0;
+    z-index: -1;
+    display: none;
+}
+
+.form-control-file {
+    cursor: pointer;
+    height: auto;
+}
+
+.parent{
+    height: 100%;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.form-control-file:focus {
+    border: 1px solid #727272;
+}
+
+.form-control-file img{
+    width: 5%;
+    filter: invert(42%) sepia(10%) saturate(11%) hue-rotate(0deg) brightness(101%) contrast(82%);
+    margin-bottom: 20px;
+}
+
+#upload-file-area-1{
+    text-align: center;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.form-control-file .text{   
+    font-size: 15px;
+}
+
+#formulario #numero{
+    grid-column: span 2;
+}
+
+.form-title{
+    grid-column: span 4;
+}
+
+.form-title h3{
+   margin: 0.5rem 0;
+}
+
+/* Charcount */
+
+#char_count_descripcion_acceso, #char_count_descripcion {
+    font-size: 13px;
+    margin-left: 0.2rem;
+}
+
+/* Dropdown */
+
+.select{
+    position: relative;
+    border: 1px solid #b8bec3;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 0.4rem 0.7rem;
+}
+
+.select .selected{
+    display: grid;
+    grid-template-columns: repeat(2, 97% auto);
+}
+
+.select .arrow{
+    float: right;
+    font-size: 10px;
+    margin: auto 0;
+}
+
+.select .selected:hover{
+    cursor: pointer;
+}        
+
+.select .select-options{
+    padding: 0.7rem 0;            
+    border: 1px solid #b8bec3;
+    border-radius: 5px;                
+    margin-top:0.5rem;
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+    z-index: 1;        
+}
+
+.select .option{
+    padding: 0.6rem 1rem!important;
+}
+
+.select .option{
+    padding: 5px 0px;
+}
+
+.select .option:hover{
+    cursor: pointer;
+    color: #1261d6;
+
+}

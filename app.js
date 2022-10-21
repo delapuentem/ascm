@@ -11,14 +11,19 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
 // Static
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(__dirname + '/public'))
 
 // Middleware
-app.use(require('./config/middleware'))
+app.use(require('./middleware/middleware'))
+app.use(require('./middleware/multer'))
 
 // Routes
-app.use(require('./routes/index'))
+app.use(require('./routes/home'))
+app.use(require('./routes/upload'))
 app.use('/api', require('./routes/api/index'))
+app.use('/api', require('./routes/api/arboles'))
+app.use('/api', require('./routes/api/municipios'))
+app.use('/api', require('./routes/api/upload'))
 
 // Start the server
 app.listen(app.get('port'), function(){
