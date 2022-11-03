@@ -18,8 +18,9 @@ app.use(require('./middleware/middleware'))
 app.use(require('./middleware/multer'))
 
 // Routes
-app.use(require('./routes/home'))
-app.use(require('./routes/upload'))
+app.use(require('./routes/pages/home'))
+app.use(require('./routes/pages/upload'))
+app.use(require('./routes/pages/arboles-singulares'))
 app.use('/api', require('./routes/api/index'))
 app.use('/api', require('./routes/api/arboles'))
 app.use('/api', require('./routes/api/municipios'))

@@ -8,7 +8,7 @@ body {
 
 .container{
     /* Default margin */
-    margin: 0rem 13rem;
+    margin: 0rem 25rem;
 }
 
 .button {
@@ -46,3 +46,19 @@ body {
     color: #2851AC;
     background-color: #d4dbe5;
 }
+
+
+/* MEDIA */
+
+@media only screen and (max-width: 1780px) {
+    body {
+      background-color: lightblue!important;    
+    }
+    .container{
+        margin: 0rem 13rem;  
+    }
+
+    .navbar{
+        padding: 1.5rem 13rem!important;  
+    }
+  }

@@ -21,7 +21,7 @@ file.addEventListener('change', function(event){
 
 let textArea1 = document.querySelector("#descripcion_textarea");
 let characterCounter1 = document.querySelector("#char_count_descripcion");
-const maxNumOfChars1 = 400;
+const maxNumOfChars1 = 750;
 const countCharacters1 = () => {
     let maxNnumOfEnteredChars1 = textArea1.value.length;
     let counter = 0 + maxNnumOfEnteredChars1;
@@ -94,7 +94,7 @@ fetch('http://localhost:3000/api/municipios')
     });
 
 const estados = [
+    {'name': 'EXISTE'},    
     {'name': 'NO EXISTE'},
-    {'name': 'EXISTE'},
 ]
 selectDropdown('dropdown2', 'estado', estados, {'name': 'name'})    

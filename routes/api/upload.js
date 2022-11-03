@@ -56,6 +56,9 @@ router.post('/upload', async function(request, response){
     catch(error){
         console.log(error)
     }          
+    finally {
+        if (connection) connection.end()
+    }    
 
     
 })

@@ -1,0 +1,28 @@
+.card:hover{
+    cursor: pointer;
+}
+
+.card .image{
+    border-radius: 10px;
+    height: 270px;
+    background-position: center center;
+    background-size: auto 270px;
+}
+
+.card .card-footer{
+    margin-top: 1rem;
+}
+
+.card .card-footer h1{
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.card .card-footer p {  
+  margin:0;
+  margin-top: 3px;
+  color: #717171;
+}

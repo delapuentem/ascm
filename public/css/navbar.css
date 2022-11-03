@@ -1,7 +1,7 @@
 .navbar{
     box-shadow: 0 0 3px 0 rgba(0,0,0,.07),0 2px 2px 0 rgba(0,0,0,.04)!important; 
     /* Default margin */
-    padding: 1.5rem 13rem;    
+    padding: 1.5rem 25rem;    
     display: grid;
     grid-template-columns: 90% 10%;
     background-color: #ffffff;

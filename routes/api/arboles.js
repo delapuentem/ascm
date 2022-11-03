@@ -4,6 +4,11 @@ const router = Router()
 // Conexion mariadb
 const pool = require('../../config/mariadb')
 
+//Node Cache
+// https://dev.to/nahuelsegovia/almacenar-datos-en-cache-con-expressjs-283h
+const NodeCache = require('node-cache')
+const countArbolesCache = new NodeCache({stdTTL: 120}) // Tiempo duracion de cache en segundos
+
 router.get('/get', async function(request, response){
     let connection
     try{
@@ -12,7 +17,10 @@ router.get('/get', async function(request, response){
         response.json(rows)
     }
     catch(error){
-        response.send(error)
+        console.log(error)
+    }
+    finally {
+        if (connection) connection.end()
     }
 })
 
@@ -30,9 +38,32 @@ router.post('/add', async function(request, response){
     catch(error){
         console.log(error)
     }
-
-
+    finally {
+        if (connection) connection.end()
+    }
 })
 
+router.get('/countArboles', async function(request, response){
+    if (countArbolesCache.has('rows')){
+        response.json(countArbolesCache.get('rows'))
+    }
+
+    else {
+        let connection
+        try{
+            connection = await pool.getConnection()
+            const rows = await connection.query('select count(nombre) as total from ascmArboles')
+            countArbolesCache.set('rows', {'total': rows[0].total.toString()})
+            response.json({'total': rows[0].total.toString()})
+        }
+        catch(error){
+            response.send(error)
+        }
+        finally {
+            if (connection) connection.end()
+        }        
+    }
+
+})
 
 module.exports = router

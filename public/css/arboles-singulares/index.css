@@ -1,0 +1,8 @@
+.grid{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    grid-template-columns: repeat( 4, minmax(250px, 1fr) );
+  }

@@ -73,7 +73,7 @@ body{
 }
 
 .section-3{
-    padding: 3rem 0;
+    padding: 4.5rem 0 2rem 0;
 }
 
 .section-2 .section-grid{
@@ -84,12 +84,12 @@ body{
 
 .section-2 .featured{
     grid-column: span 2;
-    background-color: #a3e6c5d0;
+    background-color: #E5EDFF;
     display: grid;
     grid-template-columns: 55% 45%;
-    padding: 2rem 1.7rem 3.2rem 1.7rem;
+    padding: 4rem 1.7rem 3.2rem 1.7rem;
     gap: 1.5rem;
-    align-items: flex-end;
+    /*align-items: flex-end;*/
 }
 
 .section-2 .featured h3{
@@ -102,43 +102,72 @@ body{
     line-height: 1.8rem;
 }
 
-.section-2 .article{
-    /*background-color:purple;*/
-    background-image: url('https://www.monumentaltrees.com/db/38/600/38702.jpg');
+.section-2 .counter{
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 75% 25%;
-    
+    gap: 1rem;
+
+
 }
 
-.section-2 .article .description{
-    background-color: #275DAA;
-    cursor: pointer;
+.section-2 .counter .counter-content{
+    display: grid;
+    grid-template-columns: 40% 60%; 
+    font-weight: 800;
     padding: 1rem;
+    align-items: center;    
 }
 
-.section-2 .article .description a{
-    text-decoration: none;
+.section-2 .counter .trees { 
+    background-color: #1D71B8;   
+    border-bottom: 10px solid #588DB5;
+}
+
+.section-2 .counter .towns { 
+    background-color: #6C747E;   
+    border-bottom: 10px solid #99A4AF;
+}
+
+.section-2 .counter .counter-content .text{
+    text-align: right;
+}
+
+.section-2 .counter .counter-content img{
+    width: 50%;
+}
+
+.section-2 .counter .trees img{
+    filter: invert(78%) sepia(11%) saturate(778%) hue-rotate(159deg) brightness(89%) contrast(86%);
+}
+
+.section-2 .counter .towns img{
+    filter: invert(64%) sepia(2%) saturate(1989%) hue-rotate(174deg) brightness(105%) contrast(77%);
+}
+
+.section-2 .counter .counter-content h5{
+    margin: 0;
+    font-size: 60px;
+    color: #fff;
+}
+
+.section-2 .counter .counter-content span{
     font-size: 18px;
-    color: white;
-    font-weight: 600;
-
+    font-weight: 800;
 }
 
-.section-2 .article .image{
-    margin: 0 auto;   
-    width: 80%;
-    margin-top: 30%;
+.section-2 .counter .trees span{
+    color: #9BC3DD;
+}
 
+.section-2 .counter .towns span{
+    color: #C9D8E5;
 }
 
 .section-2 .accordion-container{
     grid-column: span 3;
-
 }
 
 .section-4{
-    padding: 2rem 0 5rem 0;
+    padding: 0rem 0 5rem 0;
 }
 
 
@@ -153,7 +182,7 @@ body{
     border: none;
     text-align: left;
     outline: none;
-    font-size: 17px;
+    font-size: 19px;
     transition: 0.4s;
     font-weight: 600;
   }
@@ -175,7 +204,7 @@ body{
   }
 
   .accordion-container img {
-    width: 2rem;
+    width: 2.3rem;
     vertical-align: middle;
     margin-right: 1rem;
   }
